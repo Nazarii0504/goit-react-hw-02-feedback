@@ -1,10 +1,14 @@
+import PropTypes from 'prop-types';
 export const Section = ({ title, children }) => {
   return (
-    <>
-      <div>
-        <h2>{title}</h2>
-        {children}
-      </div>
-    </>
+    <div>
+      <h2>{title}</h2>
+      {children}
+    </div>
   );
+};
+
+PropTypes.Section = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };

@@ -1,4 +1,5 @@
 import { Button } from './FeedbackOptions.styled';
+import PropTypes from 'prop-types';
 export const FeedbackOptions = ({
   onLeaveGoodFeedback,
   onLeaveNeutralFeedback,
@@ -11,4 +12,9 @@ export const FeedbackOptions = ({
       <Button onClick={onLeaveBadFeedback}>Bad</Button>
     </>
   );
+};
+PropTypes.FeedbackOptions = {
+  onLeaveGoodFeedback: PropTypes.func.isRequired,
+  onLeaveNeutralFeedback: PropTypes.func.isRequired,
+  onLeaveBadFeedback: PropTypes.func.isRequired,
 };
